@@ -239,3 +239,189 @@
 
 
 
+
+// // Напиши функцію calculateTotalPrice(productName), яка приймає один параметр productName - назва товару. Функція повинна повернути загальну вартість (ціна * кількість) товару з таким ім'ям з масиву products.
+// let productName = "Radar";
+// const products = [
+//     { name: "Radar", price: 1300, quantity: 4 },
+//     { name: "Scanner", price: 2700, quantity: 3 },
+//     { name: "Droid", price: 400, quantity: 7 },
+//     { name: "Grip", price: 1200, quantity: 9 },
+// ];
+
+// function calculateTotalPrice(productName) {
+//     // Change code below this line
+//     let totalPrice = 0;
+//     for (const product of products) {
+
+//         for (const key in product) {
+//             if (product[key] === productName) {
+//                 totalPrice = product.price * product.quantity
+//                 return (totalPrice);
+
+//             }
+//         }
+//     }
+//     return (totalPrice);
+
+
+//     // Change code above this line
+// }
+// console.log("sum", calculateTotalPrice("Droid"));
+
+
+
+// const highTemperatures = {
+//     yesterday: 28,
+//     today: 26,
+//     tomorrow: 33,
+// };
+// // Change code below this line
+// const {
+//     yesterday,
+//     today,
+//     tomorrow,
+//     icon: "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg",
+// } = highTemperatures;
+// const { yesterday, today, tomorrow, icon } = highTemperatures;
+
+// // Change code above this line
+// const meanTemperature = (yesterday + today + tomorrow) / 3;
+
+
+
+// const forecast = {
+//     today: {
+//         low: 28,
+//         high: 32,
+//         icon: "https://www.flaticon.com/svg/static/icons/svg/861/861059.svg",
+//     },
+//     tomorrow: {
+//         low: 27,
+//         high: 31,
+//     },
+// };
+// // Change code below this line
+// const {
+//     today: { high: highToday, low: lowToday, icon: iconToday },
+//     tomorrow: { high: highTomorrow, low: lowTomorrow, icon: iconTomorrow = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg" }, } = forecast;
+
+
+// // Напиши функцію makeTask(data) яка приймає один параметр data - об'єкт з наступними властивостями.
+// //     text - текст завдання.
+// //     category - категорія завдання.
+// //     priority - пріоритет завдання.
+// // Функція повинна створити і повернути новий об'єкт завдання, не змінюючи напряму параметр data. У новому об'єкті повинна бути властивість completed, значення якої зберігається в однойменній локальній змінній.
+// // В параметрі data гарантовано буде тільки властивість text, а інші дві, category і priority, можуть бути відсутніми.Тоді, в новому об'єкті завдання, у властивостях category і priority повинні бути значення за замовчуванням, що зберігаються в однойменних локальних змінних.
+// function makeTask(data) {
+//     const completed = false;
+//     const category = "General";
+//     const priority = "Normal";
+//     // Change code below this line
+//     const dataNew = {
+//         category: data.category || category,
+//         priority: data.priority || priority,
+//         text: data.text,
+//         completed: completed
+//     };
+//     return { ...data, ...dataNew }
+//     // Change code above this line
+// }
+
+
+
+// // Додай об'єкту bookShelf ще два методи, які поки що будуть повертати просто рядки за аналогією з getBooks() і addBook(bookName).
+// // Метод removeBook(bookName) буде видаляти книгу за назвою.Повертає рядок "Deleting book <назва книги>", де < назва книги > - це значення параметра bookName.
+// // Метод updateBook(oldName, newName) буде оновлювати назву книги на нову.Повертає рядок "Updating book <стара назва> to <нова назва>", де < стара назва > і < нова назва > - це значення параметрів oldName і newName відповідно.
+
+// const bookShelf = {
+//     // Change code below this line
+//     books: ["The last kingdom", "The guardian of dreams"],
+//     getBooks() {
+//         return "Returning all books";
+//     },
+//     addBook(bookName) {
+//         return `Adding book ${bookName}`;
+//     },
+//     removeBook(bookName) {
+//         return `Deleting book ${bookName}`;
+//     },
+//     updateBook(oldName, newName) {
+//         return `Updating book ${oldName} to ${newName}`
+//     }
+//     // Change code above this line
+// };
+
+
+
+// // Доповни метод updateBook(oldName, newName) таким чином, щоб він змінював назву книги з oldName на newName у властивості books. Використовуй indexOf() для того, щоб знайти потрібний елемент масиву, і splice() для того, щоб замінити цей елемент.
+// const bookShelf = {
+//     books: ["The last kingdom", "Haze", "The guardian of dreams"],
+//     updateBook(oldName, newName) {
+//         // Change code below this line
+//         const num = this.books.indexOf(oldName);
+//         this.books.splice(num, 1, newName);
+//         // Change code above this line
+//     },
+// };
+
+
+
+// // Замовниця хоче, щоб кожне зілля було представлено не тільки ім'ям, але й ціною, а в майбутньому, можливо, й іншими характеристиками. Тому зараз у властивості potions буде зберігатися масив об'єктів з наступними властивостями.
+
+// //       {
+// //         name: "Dragon breath",
+// //         price: 700
+// //       }
+// // Виконай рефакторинг методів об'єкта atTheOldToad таким чином, щоб вони працювали не з масивом рядків, а з масивом об'єктів.
+
+// //  getPotions() - метод для отримання всього зілля.Повертає значення властивості potions.
+// //  addPotion(newPotion) - додає зілля newPotion(вже об'єкт) в масив у властивості potions, але тільки, якщо такого зілля ще немає в інвентарі. В іншому випадку повертається рядок.
+// //  removePotion(potionName) - видаляє об'єкт зілля з ім'ям potionName з масиву у властивості potions.
+// //  updatePotionName(oldName, newName) - оновлює властивість name об'єкта-зілля з назвою oldName на newName в масиві potions.
+
+// const atTheOldToad = {
+//     potions: [
+//         { name: "Speed potion", price: 460 },
+//         { name: "Dragon breath", price: 780 },
+//         { name: "Stone skin", price: 520 },
+//     ],
+//     // Change code below this line
+//     getPotions() {
+//         return this.potions;
+//     },
+//     addPotion(newPotion) {
+//         for (let potion of this.potions) {
+//             if (potion.name === newPotion.name) {
+//                 return `Error! Potion ${newPotion.name} is already in your inventory!`;
+//             }
+//         }
+//         this.potions.push(newPotion);
+//         return this.potions;
+//     },
+//     removePotion(potionName) {
+//         for (let potionIndex = 0; potionIndex < this.potions.length; potionIndex++) {
+//             if (this.potions[potionIndex].name === potionName) {
+//                 this.potions.splice(potionIndex, 1);
+//                 return;
+//             }
+//         }
+//         return `Potion ${potionName} is not in inventory!`;
+//     },
+//     updatePotionName(oldName, newName) {
+//         for (let potion of this.potions) {
+//             if (potion.name === oldName) {
+//                 potion.name = newName;
+//                 return;
+//             }
+//         }
+//         return `Potion ${oldName} is not in inventory!`;
+//     },
+//     // Change code above this line
+// };
+
+// console.log(atTheOldToad.getPotions());
+// console.log(atTheOldToad.addPotion({ name: "Invisibility", price: 620 }));
+// console.log(atTheOldToad.addPotion({ name: "Power potion", price: 270 }));
+// console.log(atTheOldToad.addPotion({ name: "Power potion", price: 270 }));
+// console.log(atTheOldToad.removePotion("Dragon breath"));
