@@ -425,3 +425,369 @@
 // console.log(atTheOldToad.addPotion({ name: "Power potion", price: 270 }));
 // console.log(atTheOldToad.addPotion({ name: "Power potion", price: 270 }));
 // console.log(atTheOldToad.removePotion("Dragon breath"));
+
+
+
+
+// // Доповни код таким чином, щоб у змінній allGenres був масив всіх жанрів книг(властивість genres) з масиву books, а у змінній uniqueGenres - масив унікальних жанрів, без повторень.
+// const books = [
+//     {
+//         title: "The Last Kingdom",
+//         author: "Bernard Cornwell",
+//         genres: ["adventure", "history"],
+//     },
+//     {
+//         title: "Beside Still Waters",
+//         author: "Robert Sheckley",
+//         genres: ["fiction", "mysticism"],
+//     },
+//     {
+//         title: "Redder Than Blood",
+//         author: "Tanith Lee",
+//         genres: ["horror", "mysticism", "adventure"],
+//     },
+// ];
+// // Change code below this line
+// const allGenres = books.flatMap(book => book.genres);
+// const uniqueGenres = allGenres.filter(
+//     (genre, index, array) => array.indexOf(genre) === index
+// );
+// console.log(allGenres); // ['adventure', 'history', 'fiction', 'mysticism', 'horror', 'mysticism', 'adventure']
+// console.log(uniqueGenres); // [ 'adventure', 'history', 'fiction', 'mysticism', 'horror' ]
+
+
+
+
+// // Використовуючи метод filter(), доповни код таким чином, щоб:
+// // У змінній topRatedBooks утворився масив книг, рейтинг яких(властивість rating) більший за або дорівнює значенню змінної MIN_RATING.
+// // У змінній booksByAuthor утворився масив книг, написаних автором з ім'ям (властивість author), яке збігається зі значенням у змінній AUTHOR.
+// const books = [
+//     {
+//         title: "The Last Kingdom",
+//         author: "Bernard Cornwell",
+//         rating: 8.38,
+//     },
+//     {
+//         title: "Beside Still Waters",
+//         author: "Robert Sheckley",
+//         rating: 8.51,
+//     },
+//     {
+//         title: "The Dream of a Ridiculous Man",
+//         author: "Fyodor Dostoevsky",
+//         rating: 7.75,
+//     },
+//     { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//     { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+// ];
+
+// const MIN_RATING = 8;
+// const AUTHOR = "Bernard Cornwell";
+// // Change code below this line
+
+// const topRatedBooks = books.filter(book => book.rating >= MIN_RATING);
+// const booksByAuthor = books.filter(book => book.author === AUTHOR);
+
+// console.log("topRatedBooks:", topRatedBooks);
+// // topRatedBooks: [
+// //     {
+// //         title: 'The Last Kingdom',
+// //         author: 'Bernard Cornwell',
+// //         rating: 8.38
+// //     },
+// //     {
+// //         title: 'Beside Still Waters',
+// //         author: 'Robert Sheckley',
+// //         rating: 8.51
+// //     },
+// //     { title: 'Enemy of God', author: 'Bernard Cornwell', rating: 8.67 }
+// // ]
+// console.log("booksByAuthor:", booksByAuthor);
+// // booksByAuthor: [
+// //     {
+// //         title: 'The Last Kingdom',
+// //         author: 'Bernard Cornwell',
+// //         rating: 8.38
+// //     },
+// //     { title: 'Enemy of God', author: 'Bernard Cornwell', rating: 8.67 }
+// // ]
+
+
+
+
+const users = [
+    {
+        name: "Moore Hensley",
+        email: "moorehensley@indexia.com",
+        eyeColor: "blue",
+        friends: ["Sharron Pace"],
+        isActive: false,
+        balance: 2811,
+        gender: "male"
+    },
+    {
+        name: "Sharlene Bush",
+        email: "sharlenebush@tubesys.com",
+        eyeColor: "blue",
+        friends: ["Briana Decker", "Sharron Pace"],
+        isActive: true,
+        balance: 3821,
+        gender: "female"
+    },
+    {
+        name: "Ross Vazquez",
+        email: "rossvazquez@xinware.com",
+        eyeColor: "green",
+        friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+        isActive: false,
+        balance: 3793,
+        gender: "male"
+    },
+    {
+        name: "Elma Head",
+        email: "elmahead@omatom.com",
+        eyeColor: "green",
+        friends: ["Goldie Gentry", "Aisha Tran"],
+        isActive: true,
+        balance: 2278,
+        gender: "female"
+    },
+    {
+        name: "Carey Barr",
+        email: "careybarr@nurali.com",
+        eyeColor: "blue",
+        friends: ["Jordan Sampson", "Eddie Strong"],
+        isActive: true,
+        balance: 3951,
+        gender: "male"
+    },
+    {
+        name: "Blackburn Dotson",
+        email: "blackburndotson@furnigeer.com",
+        eyeColor: "brown",
+        friends: ["Jacklyn Lucas", "Linda Chapman"],
+        isActive: false,
+        balance: 1498,
+        gender: "male"
+    },
+    {
+        name: "Sheree Anthony",
+        email: "shereeanthony@kog.com",
+        eyeColor: "brown",
+        friends: ["Goldie Gentry", "Briana Decker"],
+        isActive: true,
+        balance: 2764,
+        gender: "female"
+    }
+];
+// Доповни функцію getUsersWithEyeColor(users, color) таким чином, щоб вона повертала масив користувачів, у яких колір очей (властивість eyeColor) збігається зі значенням параметра color.
+const getUsersWithEyeColor = (users, color) => {
+    const usersWithEyeColor = users.filter(user => user.eyeColor === color);
+    return usersWithEyeColor;
+};
+
+// Доповни функцію getUsersWithAge(users, minAge, maxAge) таким чином, щоб вона повертала масив користувачів, вік яких (властивість age) потрапляє у проміжок від minAge до maxAge.
+const getUsersWithAge = (users, minAge, maxAge) => {
+    const usersWithAge = users.filter(user => user.age >= minAge & user.age <= maxAge);
+    return usersWithAge;
+};
+
+// Доповни функцію getUsersWithFriend(users, friendName) таким чином, щоб вона повертала масив користувачів, у яких є один з ім'ям в параметрі friendName. 
+const getUsersWithFriend = (users, friendName) => {
+    const usersWithFriends = users.filter(user => user.friends.includes(friendName));
+    return usersWithFriends;
+};
+
+// Доповни функцію getFriends(users) таким чином, щоб вона повертала масив друзів всіх користувачів (властивість friends). У декількох користувачів можуть бути однакові друзі, зроби так, щоб масив, що повертається, не містив повторень.
+const getFriends = (users) => {
+    const allFriends = users.flatMap(user => user.friends);
+    const uniqueFriends = allFriends.filter(
+        (friend, index, array) => array.indexOf(friend) === index
+    );
+    return uniqueFriends;
+};
+
+// Доповни функцію getActiveUsers(users) таким чином, щоб вона повертала масив активних користувачів, значення властивості isActive яких - true.
+const getActiveUsers = (users) => {
+    const activeUsers = users.filter(user => user.isActive === true);
+    return activeUsers;
+};
+
+// Доповни функцію getUserWithEmail(users, email) таким чином, щоб вона повертала об'єкт користувача, пошта якого (властивість email) збігається зі значенням параметра email.
+const getUserWithEmail = (users, email) => {
+    const userWithEmail = users.find(user => user.email === email);
+    return userWithEmail;
+};
+// console.log(getUserWithEmail(users, "blackburndotson@furnigeer.com"))
+
+// Доповни функцію isEveryUserActive(users) таким чином, щоб вона перевіряла, чи всі користувачі зараз активні (властивість isActive) і повертала true або false.
+const isEveryUserActive = (users) => {
+    const allUserIsActive = users.every(user => user.isActive === true);
+    return allUserIsActive;
+};
+
+// Доповни функцію isAnyUserActive(users) таким чином, щоб вона перевіряла наявність активних користувачів (властивість isActive) і повертала true або false.
+const isAnyUserActive = users => {
+    const anyUserIsActive = users.some(user => user.isActive === true);
+    return anyUserIsActive;
+};
+
+// Доповни функцію calculateTotalBalance(users) таким чином, щоб вона рахувала і повертала суму всіх коштів (властивість balance), які зберігають користувачі з масиву users.
+const calculateTotalBalance = users => {
+    const totalBalance = users.reduce((total, user) => total + user.balance, 0);
+    return totalBalance;
+};
+
+// Доповни функцію getTotalFriendCount(users) таким чином, щоб вона рахувала і повертала загальну кількість друзів (властивість friends) усіх користувачів з масиву users.
+const getTotalFriendCount = users => {
+    const totalFriends = users.reduce((total, user) => total + user.friends.length, 0);
+    return totalFriends;
+};
+
+// Доповни функцію sortByAscendingBalance(users) таким чином, щоб вона повертала масив користувачів, відсортований за зростанням їх балансу (властивість balance).
+const sortByAscendingBalance = users => {
+    const sortedBalance = [...users].sort((a, b) => a.balance - b.balance);
+    return sortedBalance;
+
+};
+
+// Доповни функцію sortByDescendingFriendCount(users) таким чином, щоб вона повертала масив користувачів, відсортований за спаданням кількості їхніх друзів (властивість friends).
+const sortByDescendingFriendCount = users => {
+    const sortFriendCount = [...users].sort((a, b) => b.friends.length - a.friends.length);
+    return sortFriendCount;
+};
+
+// Доповни функцію sortByName(users) таким чином, щоб вона повертала масив користувачів, відсортований за їх ім'ям (властивість name) в алфавітному порядку.
+const sortByName = users => {
+    const sortFriendCount = [...users].sort((a, b) => a.name.localeCompare(b.name));
+    return sortFriendCount;
+};
+
+// Доповни функцію getNamesSortedByFriendCount(users) таким чином, щоб вона повертала масив імен користувачів, відсортований за зростанням кількості їхніх друзів (властивість friends).
+const getNamesSortedByFriendCount = users => {
+    const names = [...users]
+        .sort((a, b) => a.friends.length - b.friends.length)
+        .map(user => user.name);
+    return names;
+};
+
+// Доповни функцію getSortedFriends(users) таким чином, щоб вона повертала масив унікальних імен друзів (властивість friends), відсортований за алфавітом.
+const getSortedFriends = users => {
+    const names = users
+        .flatMap(user => user.friends)
+        .filter((friend, index, array) => array.indexOf(friend) === index)
+        .sort((a, b) => a.localeCompare(b));
+    return names;
+};
+// console.log(getSortedFriends(users));
+
+// Доповни функцію getTotalBalanceByGender(users, gender) таким чином, щоб вона повертала загальний баланс користувачів (властивість balance), стать яких (властивість gender) збігається зі значенням параметра gender.
+const getTotalBalanceByGender = (users, gender) => {
+    const balanceGender = users
+        .filter(user => user.gender === gender)
+        .reduce((total, user) => total + user.balance, 0);
+    return balanceGender;
+};
+
+
+
+
+
+
+
+
+
+// // Доповни код таким чином, щоб у змінній ascendingReleaseDates вийшла копія масиву releaseDates, відсортована за зростанням, а у змінній alphabeticalAuthors - копія масиву імен авторів authors, відсортована за алфавітом.
+// const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+// const authors = [
+//     "Tanith Lee",
+//     "Bernard Cornwell",
+//     "Robert Sheckley",
+//     "Fyodor Dostoevsky",
+// ];
+// const ascendingReleaseDates = [...releaseDates].sort();
+// const alphabeticalAuthors = [...authors].sort();
+
+// console.log(releaseDates); // [2016, 1967, 2008, 1984, 1973, 2012, 1997]
+// console.log(ascendingReleaseDates); // [1967, 1973, 1984, 1997, 2008, 2012, 2016]
+// console.log(authors); // ['Tanith Lee', 'Bernard Cornwell', 'Robert Sheckley', 'Fyodor Dostoevsky']
+// console.log(alphabeticalAuthors); // ['Bernard Cornwell', 'Fyodor Dostoevsky', 'Robert Sheckley', 'Tanith Lee']
+
+
+
+
+
+
+// // Онлайн бібіліотеці необхідно відображати книги, відсортовані за датою видання, за її зростанням або спаданням. Доповни код таким чином, щоб у змінній ascendingReleaseDates вийшла копія масиву releaseDates, відсортована за зростанням, а у змінній descendingReleaseDates - копія, відсортована за спаданням.
+// const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+
+// const ascendingReleaseDates = [...releaseDates].sort((a, b) => a - b);
+// const descendingReleaseDates = [...releaseDates].sort((a, b) => b - a);
+
+
+
+
+
+
+// const books = [
+//     {
+//         title: "The Last Kingdom",
+//         author: "Bernard Cornwell",
+//         rating: 8.38,
+//     },
+//     {
+//         title: "Beside Still Waters",
+//         author: "Robert Sheckley",
+//         rating: 8.51,
+//     },
+//     {
+//         title: "The Dream of a Ridiculous Man",
+//         author: "Fyodor Dostoevsky",
+//         rating: 7.75,
+//     },
+//     { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//     { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+// ];
+
+// const sortedByAuthorName = [...books].sort((a, b) => a.author.localeCompare(b.author));
+// const sortedByReversedAuthorName = [...books].sort((a, b) => b.author.localeCompare(a.author));
+// const sortedByAscendingRating = [...books].sort((a, b) => a.rating - b.rating);
+// const sortedByDescentingRating = [...books].sort((a, b) => b.rating - a.rating);
+// console.log(sortedByAuthorName);
+// console.log(sortedByReversedAuthorName);
+// console.log(sortedByAscendingRating);
+// console.log(sortedByDescentingRating);
+
+
+// const books = [
+//     {
+//         title: "The Last Kingdom",
+//         author: "Bernard Cornwell",
+//         rating: 8.38,
+//     },
+//     {
+//         title: "Beside Still Waters",
+//         author: "Robert Sheckley",
+//         rating: 8.51,
+//     },
+//     {
+//         title: "The Dream of a Ridiculous Man",
+//         author: "Fyodor Dostoevsky",
+//         rating: 7.75,
+//     },
+//     { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//     {
+//         title: "The Dreams in the Witch House",
+//         author: "Howard Lovecraft",
+//         rating: 8.67,
+//     },
+// ];
+// const MIN_BOOK_RATING = 8;
+// // Change code below this line
+
+// const names = [...books]
+//     .sort((a, b) => a.author.localeCompare(b.author))
+//     .filter(book => book.rating > MIN_BOOK_RATING)
+//     .map(student => student.author);
+
+// console.log(names);
