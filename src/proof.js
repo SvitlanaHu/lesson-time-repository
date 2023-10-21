@@ -515,181 +515,179 @@
 
 
 
-const users = [
-    {
-        name: "Moore Hensley",
-        email: "moorehensley@indexia.com",
-        eyeColor: "blue",
-        friends: ["Sharron Pace"],
-        isActive: false,
-        balance: 2811,
-        gender: "male"
-    },
-    {
-        name: "Sharlene Bush",
-        email: "sharlenebush@tubesys.com",
-        eyeColor: "blue",
-        friends: ["Briana Decker", "Sharron Pace"],
-        isActive: true,
-        balance: 3821,
-        gender: "female"
-    },
-    {
-        name: "Ross Vazquez",
-        email: "rossvazquez@xinware.com",
-        eyeColor: "green",
-        friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
-        isActive: false,
-        balance: 3793,
-        gender: "male"
-    },
-    {
-        name: "Elma Head",
-        email: "elmahead@omatom.com",
-        eyeColor: "green",
-        friends: ["Goldie Gentry", "Aisha Tran"],
-        isActive: true,
-        balance: 2278,
-        gender: "female"
-    },
-    {
-        name: "Carey Barr",
-        email: "careybarr@nurali.com",
-        eyeColor: "blue",
-        friends: ["Jordan Sampson", "Eddie Strong"],
-        isActive: true,
-        balance: 3951,
-        gender: "male"
-    },
-    {
-        name: "Blackburn Dotson",
-        email: "blackburndotson@furnigeer.com",
-        eyeColor: "brown",
-        friends: ["Jacklyn Lucas", "Linda Chapman"],
-        isActive: false,
-        balance: 1498,
-        gender: "male"
-    },
-    {
-        name: "Sheree Anthony",
-        email: "shereeanthony@kog.com",
-        eyeColor: "brown",
-        friends: ["Goldie Gentry", "Briana Decker"],
-        isActive: true,
-        balance: 2764,
-        gender: "female"
-    }
-];
-// Доповни функцію getUsersWithEyeColor(users, color) таким чином, щоб вона повертала масив користувачів, у яких колір очей (властивість eyeColor) збігається зі значенням параметра color.
-const getUsersWithEyeColor = (users, color) => {
-    const usersWithEyeColor = users.filter(user => user.eyeColor === color);
-    return usersWithEyeColor;
-};
+// const users = [
+//     {
+//         name: "Moore Hensley",
+//         email: "moorehensley@indexia.com",
+//         eyeColor: "blue",
+//         friends: ["Sharron Pace"],
+//         isActive: false,
+//         balance: 2811,
+//         gender: "male"
+//     },
+//     {
+//         name: "Sharlene Bush",
+//         email: "sharlenebush@tubesys.com",
+//         eyeColor: "blue",
+//         friends: ["Briana Decker", "Sharron Pace"],
+//         isActive: true,
+//         balance: 3821,
+//         gender: "female"
+//     },
+//     {
+//         name: "Ross Vazquez",
+//         email: "rossvazquez@xinware.com",
+//         eyeColor: "green",
+//         friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+//         isActive: false,
+//         balance: 3793,
+//         gender: "male"
+//     },
+//     {
+//         name: "Elma Head",
+//         email: "elmahead@omatom.com",
+//         eyeColor: "green",
+//         friends: ["Goldie Gentry", "Aisha Tran"],
+//         isActive: true,
+//         balance: 2278,
+//         gender: "female"
+//     },
+//     {
+//         name: "Carey Barr",
+//         email: "careybarr@nurali.com",
+//         eyeColor: "blue",
+//         friends: ["Jordan Sampson", "Eddie Strong"],
+//         isActive: true,
+//         balance: 3951,
+//         gender: "male"
+//     },
+//     {
+//         name: "Blackburn Dotson",
+//         email: "blackburndotson@furnigeer.com",
+//         eyeColor: "brown",
+//         friends: ["Jacklyn Lucas", "Linda Chapman"],
+//         isActive: false,
+//         balance: 1498,
+//         gender: "male"
+//     },
+//     {
+//         name: "Sheree Anthony",
+//         email: "shereeanthony@kog.com",
+//         eyeColor: "brown",
+//         friends: ["Goldie Gentry", "Briana Decker"],
+//         isActive: true,
+//         balance: 2764,
+//         gender: "female"
+//     }
+// ];
+// // Доповни функцію getUsersWithEyeColor(users, color) таким чином, щоб вона повертала масив користувачів, у яких колір очей (властивість eyeColor) збігається зі значенням параметра color.
+// const getUsersWithEyeColor = (users, color) => {
+//     const usersWithEyeColor = users.filter(user => user.eyeColor === color);
+//     return usersWithEyeColor;
+// };
 
-// Доповни функцію getUsersWithAge(users, minAge, maxAge) таким чином, щоб вона повертала масив користувачів, вік яких (властивість age) потрапляє у проміжок від minAge до maxAge.
-const getUsersWithAge = (users, minAge, maxAge) => {
-    const usersWithAge = users.filter(user => user.age >= minAge & user.age <= maxAge);
-    return usersWithAge;
-};
+// // Доповни функцію getUsersWithAge(users, minAge, maxAge) таким чином, щоб вона повертала масив користувачів, вік яких (властивість age) потрапляє у проміжок від minAge до maxAge.
+// const getUsersWithAge = (users, minAge, maxAge) => {
+//     const usersWithAge = users.filter(user => user.age >= minAge & user.age <= maxAge);
+//     return usersWithAge;
+// };
 
-// Доповни функцію getUsersWithFriend(users, friendName) таким чином, щоб вона повертала масив користувачів, у яких є один з ім'ям в параметрі friendName. 
-const getUsersWithFriend = (users, friendName) => {
-    const usersWithFriends = users.filter(user => user.friends.includes(friendName));
-    return usersWithFriends;
-};
+// // Доповни функцію getUsersWithFriend(users, friendName) таким чином, щоб вона повертала масив користувачів, у яких є один з ім'ям в параметрі friendName.
+// const getUsersWithFriend = (users, friendName) => {
+//     const usersWithFriends = users.filter(user => user.friends.includes(friendName));
+//     return usersWithFriends;
+// };
 
-// Доповни функцію getFriends(users) таким чином, щоб вона повертала масив друзів всіх користувачів (властивість friends). У декількох користувачів можуть бути однакові друзі, зроби так, щоб масив, що повертається, не містив повторень.
-const getFriends = (users) => {
-    const allFriends = users.flatMap(user => user.friends);
-    const uniqueFriends = allFriends.filter(
-        (friend, index, array) => array.indexOf(friend) === index
-    );
-    return uniqueFriends;
-};
+// // Доповни функцію getFriends(users) таким чином, щоб вона повертала масив друзів всіх користувачів (властивість friends). У декількох користувачів можуть бути однакові друзі, зроби так, щоб масив, що повертається, не містив повторень.
+// const getFriends = (users) => {
+//     const allFriends = users.flatMap(user => user.friends);
+//     const uniqueFriends = allFriends.filter(
+//         (friend, index, array) => array.indexOf(friend) === index
+//     );
+//     return uniqueFriends;
+// };
 
-// Доповни функцію getActiveUsers(users) таким чином, щоб вона повертала масив активних користувачів, значення властивості isActive яких - true.
-const getActiveUsers = (users) => {
-    const activeUsers = users.filter(user => user.isActive === true);
-    return activeUsers;
-};
+// // Доповни функцію getActiveUsers(users) таким чином, щоб вона повертала масив активних користувачів, значення властивості isActive яких - true.
+// const getActiveUsers = (users) => {
+//     const activeUsers = users.filter(user => user.isActive === true);
+//     return activeUsers;
+// };
 
-// Доповни функцію getUserWithEmail(users, email) таким чином, щоб вона повертала об'єкт користувача, пошта якого (властивість email) збігається зі значенням параметра email.
-const getUserWithEmail = (users, email) => {
-    const userWithEmail = users.find(user => user.email === email);
-    return userWithEmail;
-};
-// console.log(getUserWithEmail(users, "blackburndotson@furnigeer.com"))
+// // Доповни функцію getUserWithEmail(users, email) таким чином, щоб вона повертала об'єкт користувача, пошта якого (властивість email) збігається зі значенням параметра email.
+// const getUserWithEmail = (users, email) => {
+//     const userWithEmail = users.find(user => user.email === email);
+//     return userWithEmail;
+// };
+// // console.log(getUserWithEmail(users, "blackburndotson@furnigeer.com"))
 
-// Доповни функцію isEveryUserActive(users) таким чином, щоб вона перевіряла, чи всі користувачі зараз активні (властивість isActive) і повертала true або false.
-const isEveryUserActive = (users) => {
-    const allUserIsActive = users.every(user => user.isActive === true);
-    return allUserIsActive;
-};
+// // Доповни функцію isEveryUserActive(users) таким чином, щоб вона перевіряла, чи всі користувачі зараз активні (властивість isActive) і повертала true або false.
+// const isEveryUserActive = (users) => {
+//     const allUserIsActive = users.every(user => user.isActive === true);
+//     return allUserIsActive;
+// };
 
-// Доповни функцію isAnyUserActive(users) таким чином, щоб вона перевіряла наявність активних користувачів (властивість isActive) і повертала true або false.
-const isAnyUserActive = users => {
-    const anyUserIsActive = users.some(user => user.isActive === true);
-    return anyUserIsActive;
-};
+// // Доповни функцію isAnyUserActive(users) таким чином, щоб вона перевіряла наявність активних користувачів (властивість isActive) і повертала true або false.
+// const isAnyUserActive = users => {
+//     const anyUserIsActive = users.some(user => user.isActive === true);
+//     return anyUserIsActive;
+// };
 
-// Доповни функцію calculateTotalBalance(users) таким чином, щоб вона рахувала і повертала суму всіх коштів (властивість balance), які зберігають користувачі з масиву users.
-const calculateTotalBalance = users => {
-    const totalBalance = users.reduce((total, user) => total + user.balance, 0);
-    return totalBalance;
-};
+// // Доповни функцію calculateTotalBalance(users) таким чином, щоб вона рахувала і повертала суму всіх коштів (властивість balance), які зберігають користувачі з масиву users.
+// const calculateTotalBalance = users => {
+//     const totalBalance = users.reduce((total, user) => total + user.balance, 0);
+//     return totalBalance;
+// };
 
-// Доповни функцію getTotalFriendCount(users) таким чином, щоб вона рахувала і повертала загальну кількість друзів (властивість friends) усіх користувачів з масиву users.
-const getTotalFriendCount = users => {
-    const totalFriends = users.reduce((total, user) => total + user.friends.length, 0);
-    return totalFriends;
-};
+// // Доповни функцію getTotalFriendCount(users) таким чином, щоб вона рахувала і повертала загальну кількість друзів (властивість friends) усіх користувачів з масиву users.
+// const getTotalFriendCount = users => {
+//     const totalFriends = users.reduce((total, user) => total + user.friends.length, 0);
+//     return totalFriends;
+// };
 
-// Доповни функцію sortByAscendingBalance(users) таким чином, щоб вона повертала масив користувачів, відсортований за зростанням їх балансу (властивість balance).
-const sortByAscendingBalance = users => {
-    const sortedBalance = [...users].sort((a, b) => a.balance - b.balance);
-    return sortedBalance;
+// // Доповни функцію sortByAscendingBalance(users) таким чином, щоб вона повертала масив користувачів, відсортований за зростанням їх балансу (властивість balance).
+// const sortByAscendingBalance = users => {
+//     const sortedBalance = [...users].sort((a, b) => a.balance - b.balance);
+//     return sortedBalance;
 
-};
+// };
 
-// Доповни функцію sortByDescendingFriendCount(users) таким чином, щоб вона повертала масив користувачів, відсортований за спаданням кількості їхніх друзів (властивість friends).
-const sortByDescendingFriendCount = users => {
-    const sortFriendCount = [...users].sort((a, b) => b.friends.length - a.friends.length);
-    return sortFriendCount;
-};
+// // Доповни функцію sortByDescendingFriendCount(users) таким чином, щоб вона повертала масив користувачів, відсортований за спаданням кількості їхніх друзів (властивість friends).
+// const sortByDescendingFriendCount = users => {
+//     const sortFriendCount = [...users].sort((a, b) => b.friends.length - a.friends.length);
+//     return sortFriendCount;
+// };
 
-// Доповни функцію sortByName(users) таким чином, щоб вона повертала масив користувачів, відсортований за їх ім'ям (властивість name) в алфавітному порядку.
-const sortByName = users => {
-    const sortFriendCount = [...users].sort((a, b) => a.name.localeCompare(b.name));
-    return sortFriendCount;
-};
+// // Доповни функцію sortByName(users) таким чином, щоб вона повертала масив користувачів, відсортований за їх ім'ям (властивість name) в алфавітному порядку.
+// const sortByName = users => {
+//     const sortFriendCount = [...users].sort((a, b) => a.name.localeCompare(b.name));
+//     return sortFriendCount;
+// };
 
-// Доповни функцію getNamesSortedByFriendCount(users) таким чином, щоб вона повертала масив імен користувачів, відсортований за зростанням кількості їхніх друзів (властивість friends).
-const getNamesSortedByFriendCount = users => {
-    const names = [...users]
-        .sort((a, b) => a.friends.length - b.friends.length)
-        .map(user => user.name);
-    return names;
-};
+// // Доповни функцію getNamesSortedByFriendCount(users) таким чином, щоб вона повертала масив імен користувачів, відсортований за зростанням кількості їхніх друзів (властивість friends).
+// const getNamesSortedByFriendCount = users => {
+//     const names = [...users]
+//         .sort((a, b) => a.friends.length - b.friends.length)
+//         .map(user => user.name);
+//     return names;
+// };
 
-// Доповни функцію getSortedFriends(users) таким чином, щоб вона повертала масив унікальних імен друзів (властивість friends), відсортований за алфавітом.
-const getSortedFriends = users => {
-    const names = users
-        .flatMap(user => user.friends)
-        .filter((friend, index, array) => array.indexOf(friend) === index)
-        .sort((a, b) => a.localeCompare(b));
-    return names;
-};
-// console.log(getSortedFriends(users));
+// // Доповни функцію getSortedFriends(users) таким чином, щоб вона повертала масив унікальних імен друзів (властивість friends), відсортований за алфавітом.
+// const getSortedFriends = users => {
+//     const names = users
+//         .flatMap(user => user.friends)
+//         .filter((friend, index, array) => array.indexOf(friend) === index)
+//         .sort((a, b) => a.localeCompare(b));
+//     return names;
+// };
+// // console.log(getSortedFriends(users));
 
-// Доповни функцію getTotalBalanceByGender(users, gender) таким чином, щоб вона повертала загальний баланс користувачів (властивість balance), стать яких (властивість gender) збігається зі значенням параметра gender.
-const getTotalBalanceByGender = (users, gender) => {
-    const balanceGender = users
-        .filter(user => user.gender === gender)
-        .reduce((total, user) => total + user.balance, 0);
-    return balanceGender;
-};
-
-
+// // Доповни функцію getTotalBalanceByGender(users, gender) таким чином, щоб вона повертала загальний баланс користувачів (властивість balance), стать яких (властивість gender) збігається зі значенням параметра gender.
+// const getTotalBalanceByGender = (users, gender) => {
+//     const balanceGender = users
+//         .filter(user => user.gender === gender)
+//         .reduce((total, user) => total + user.balance, 0);
+//     return balanceGender;
+// };
 
 
 
@@ -791,3 +789,154 @@ const getTotalBalanceByGender = (users, gender) => {
 //     .map(student => student.author);
 
 // console.log(names);
+
+
+
+
+
+
+// *************************************
+//            MODUL 5
+// *************************************
+
+// // Напиши клас Storage, який буде створювати об'єкти для управління складом товарів. Клас очікує тільки один аргумент - початковий масив товарів, який записується у властивість items об'єкта, що створюється.
+// // Оголоси наступні методи класу:
+// // getItems() - повертає масив поточних товарів у властивості items об'єкта, який викликає цей метод.
+// // addItem(newItem) - приймає новий товар newItem і додає його в масив товарів у властивості items об'єкта, який викликає цей метод.
+// // removeItem(itemToRemove) - приймає товар itemToRemove і видаляє його з масиву товарів у властивості items об'єкта, який викликає цей метод.
+// class Storage {
+//     constructor(items) {
+//         this.items = items;
+//     }
+
+
+//     getItems() {
+//         return this.items;
+//     }
+
+//     addItem(newItem) {
+//         this.items.push(newItem);
+//     }
+
+//     removeItem(itemToRemove) {
+//         const i = this.items.indexOf(itemToRemove);
+//         this.items.splice(i, 1);
+//     }
+// }
+
+// // Change code above this line
+// const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
+// console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
+// storage.addItem("Droid");
+// console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
+// storage.removeItem("Prolonger");
+// console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
+
+
+
+
+
+// class User {
+//     email;
+
+//     constructor(email) {
+//         this.email = email;
+//     }
+
+//     get email() {
+//         return this.email;
+//     }
+
+//     set email(newEmail) {
+//         this.email = newEmail;
+//     }
+// }
+
+// class Admin extends User {
+//     // Change code below this line
+
+//     static AccessLevel = {
+//         BASIC: "basic",
+//         SUPERUSER: "superuser",
+//     };
+
+
+//     constructor({ email, accessLevel }) {
+//         super(email);
+//         this.accessLevel = {
+//             BASIC: "basic",
+//             SUPERUSER: "superuser",
+//         };
+//     }
+
+
+//     // Change code above this line
+// }
+
+// const mango = new Admin({
+//     email: "mango@mail.com",
+//     accessLevel: Admin.AccessLevel.SUPERUSER,
+// });
+
+// console.log(mango.email); // "mango@mail.com"
+// console.log(mango.accessLevel); // "superuser"
+
+
+
+
+
+
+class User {
+    email;
+
+    constructor(email) {
+        this.email = email;
+    }
+
+    get email() {
+        return this.email;
+    }
+
+    set email(newEmail) {
+        this.email = newEmail;
+    }
+}
+class Admin extends User {
+    // Change code below this line
+
+    static AccessLevel = {
+        BASIC: "basic",
+        SUPERUSER: "superuser",
+    };
+    blacklistedEmails = [];
+
+    constructor({ email, accessLevel }) {
+        super(email);
+        this.accessLevel = accessLevel;
+    }
+
+    blacklist(email) {
+        this.blacklistedEmails.push(email);
+    }
+
+    isBlacklisted(email) {
+        return this.blacklistedEmails.includes(email);
+    }
+
+
+    // Change code above this line
+}
+
+const mango = new Admin({
+    email: "mango@mail.com",
+    accessLevel: Admin.AccessLevel.SUPERUSER,
+});
+
+console.log(mango.email); // "mango@mail.com"
+console.log(mango.accessLevel); // "superuser"
+
+mango.blacklist("poly@mail.com");
+console.log(mango.blacklistedEmails); // ["poly@mail.com"]
+console.log(mango.isBlacklisted("mango@mail.com")); // false
+console.log(mango.isBlacklisted("poly@mail.com")); // true
+
